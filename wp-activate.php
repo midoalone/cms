@@ -4,7 +4,6 @@
  * up for a new blog matches the key for that user and then displays confirmation.
  *
  * @package WordPress
- * add a line
  */
 /** Define ABSPATH as this file's directory */
 define('WP_INSTALLING', true);
