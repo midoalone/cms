@@ -4,7 +4,6 @@
  * up for a new blog matches the key for that user and then displays confirmation.
  *
  * @package WordPress
- * test
  */
 /** Define ABSPATH as this file's directory */
 define('WP_INSTALLING', true);
@@ -58,7 +57,7 @@ get_header();
 ?>
 
 <div id="content" class="widecolumn">
-<?php if (empty($_GET['key']) && empty($_POST['key'])) { ?>
+    <?php if (empty($_GET['key']) && empty($_POST['key'])) { ?>
 
         <h2><?php _e('Activation Key Required') ?></h2>
         <form name="activateform" id="activateform" method="post" action="<?php echo network_site_url('wp-activate.php'); ?>">
@@ -71,7 +70,7 @@ get_header();
             </p>
         </form>
 
-    <?php
+        <?php
     } else {
 
         $key = !empty($_GET['key']) ? $_GET['key'] : $_POST['key'];
